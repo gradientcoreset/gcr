@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>GCR: Gradient Coreset Based Replay Buffer Selection For Continual Learning </title>
+	<title> Creative and Descriptive Paper Title </title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -138,50 +138,77 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Creative and Descriptive Paper Title</span>
-		<table align=center width=600px>
-			<table align=center width=600px>
+		<span style="font-size:36px">GCR: Gradient Coreset Based Replay Buffer Selection<br> For Continual Learning</span>
+		<br><br>
+		<table align=center width=900px>
+			<table align=center width=900px>
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a href="https://rishabhtiwari.live/">Rishabh Tiwari<sup>1,</sup><sup>2</sup> </a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px"><a href="https://krishnatejakillamsetty.me/">Krishnateja Killamsetty<sup>3</sup> </a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a href="https://cs.utdallas.edu/people/faculty/iyer-rishabh/">Rishabh Iyer<sup>3</sup> </a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://sites.google.com/site/pshenoyuw/">Pradeep Shenoy<sup>1</sup> </a></span>
 						</center>
 					</td>
 				</tr>
 			</table>
-			<table align=center width=250px>
+			<table align=center width=900px>
+				<table align=center width=900px>
+					<tr>
+						<td align=center width=200px>
+							<center>
+								<span style="font-size:24px"><sup>1</sup>Google Research India</span>
+							</center>
+						</td>
+						<td align=center width=200px>
+							<center>
+								<span style="font-size:24px"><sup>2</sup>IIT (ISM) Dhanbad</span>
+							</center>
+						</td>
+						<td align=center width=140px>
+							<center>
+								<span style="font-size:24px"><sup>3</sup>UT Dallas</span>
+							</center>
+						</td>
+					</tr>
+				</table>
+			<br>
+			<table align=center width=650px>
 				<tr>
-					<td align=center width=120px>
+					<td align=center width=300px>
 						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+							<span style="font-size:24px"><a href='https://arxiv.org/pdf/2111.11210.pdf'>[Paper]</a></span>
 						</center>
 					</td>
-					<td align=center width=120px>
+					<td align=center width=350px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:24px">[Code: Coming Soon]</span>
 						</center>
 					</td>
 				</tr>
 			</table>
 		</table>
 	</center>
-
+	<br><br>
 	<center>
 		<table align=center width=850px>
 			<tr>
 				<td width=260px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img class="round" style="width:500px" src="./resources/gcr_relative_gain_over_derpp.png"/>
 					</center>
 				</td>
 			</tr>
@@ -189,7 +216,7 @@
 		<table align=center width=850px>
 			<tr>
 				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
+					When training CL models on S-Cifar100 with different replay buffer sizes K ∈ [200, 500, 2000], the use of replay buffers selected by GCR produces higher model accuracy and lower model forgetting than using reservoir-sampled replay buffers.
 				</td>
 			</tr>
 		</table>
@@ -201,30 +228,44 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				Continual learning (CL) aims to develop techniques by which a single model adapts to an increasing number of tasks encountered sequentially, thereby potentially leveraging learnings across tasks in a resource-efficient manner. A major challenge for CL systems is catastrophic forgetting, where earlier tasks are forgotten while learning a new task. To address this, replay-based CL approaches maintain and repeatedly retrain on a small buffer of data selected across encountered tasks. We propose Gradient Coreset Replay (GCR), a novel strategy for replay buffer selection and update using a carefully designed optimization criterion. Specifically, we select and maintain a 'coreset' that closely approximates the gradient of all the data seen so far with respect to current model parameters, and discuss key strategies needed for its effective application to the continual learning setting. We show significant gains (2%-4% absolute) over the state-of-the-art in the well-studied offline continual learning setting. Our findings also effectively transfer to online streaming CL settings, showing up to 5% gains over existing approaches.  Finally, we demonstrate the value of supervised contrastive loss for continual learning, which yields a cumulative gain of up to 5% accuracy when combined with our subset selection strategy.
 			</td>
 		</tr>
 	</table>
 	<br>
 
 	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
 
-	<table align=center width=800px>
-		<br>
+	<table align=center width=850px>
+		<center><h1>Method</h1></center>
 		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
+			
+			<td width=500px>
+				<center>
+				<div style = "position:relative; left:40px;">
+				<img class="round" style="width:600px" position src="./resources/cl_pipeline.png"/> </br> </br>
+				</div>
+				</center>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+				The above figure shows the overall GCR workflow. We frame an incremental update process that takes the previously selected
+				replay buffer X<sub>t−1</sub> along with a candidate pool Ct from the current task’s data D<sub>t</sub>. We work with the candidate pool C<sub>t</sub>
+				instead of the task data Dt in order to have a more general formulation that covers both Offline CL (all current task data
+				is available) and Online CL (data arrives sequentially in small buffers) scenarios.</br>
+				Our primary contribution is a formulation of the replay buffer selection as a principled optimization problem based on
+				gradient approximation. 
+			</td>
 		</tr>
 	</table>
+	<br>
+
+	
 	<hr>
 
-	<center><h1>Code</h1></center>
+	<!-- <center><h1>Code</h1></center>
 
 	<table align=center width=420px>
 		<center>
@@ -251,8 +292,8 @@
 				</td>
 			</tr>
 		</center>
-	</table>
-	<table align=center width=800px>
+	</table> -->
+	<!-- <table align=center width=800px>
 		<br>
 		<tr><center>
 			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
@@ -260,15 +301,15 @@
 		</span>
 	</table>
 	<br>
-	<hr>
+	<hr> -->
 	<table align=center width=450px>
 		<center><h1>Paper and Supplementary Material</h1></center>
 		<tr>
 			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
+			<td><span style="font-size:14pt">R. Tiwari, K. Killamsetty, R. Iyer, P. Shenoy<br>
+				<b>GCR: Gradient Coreset Based Replay Buffer Selection For Continual Learning.</b><br>
+				In Conference, CVPR 2022.<br>
+				(hosted on <a href="https://arxiv.org/abs/2111.11210">ArXiv</a>)<br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
 				<span style="font-size:4pt"><a href=""><br></a>
 				</span>
@@ -277,13 +318,13 @@
 	</table>
 	<br>
 
-	<table align=center width=600px>
+	<!-- <table align=center width=600px>
 		<tr>
 			<td><span style="font-size:14pt"><center>
 				<a href="./resources/bibtex.txt">[Bibtex]</a>
 			</center></td>
 		</tr>
-	</table>
+	</table> -->
 
 	<hr>
 	<br>
@@ -292,7 +333,7 @@
 		<tr>
 			<td width=400px>
 				<left>
-					<center><h1>Acknowledgements</h1></center>
+					<!-- <center><h1>Acknowledgements</h1></center> -->
 					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
 				</left>
 			</td>
